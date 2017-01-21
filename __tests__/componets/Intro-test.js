@@ -9,6 +9,7 @@ describe( 'Intro', ()=>{
 
   it( 'renders correctly',()=>{
     const tree = renderer.create( <Intro onPress={ onPress } /> );
+    expect( tree ).toMatchSnapshot();
   });
 
   it( 'calls onPress() when a user presses the button', ()=>{

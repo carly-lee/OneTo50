@@ -1,0 +1,43 @@
+exports[`GameScreen renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "padding": 15,
+    }
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail">
+    Game Screen
+  </Text>
+  <View
+    style={
+      Object {
+        "backgroundColor": "skyblue",
+        "flex": 0.2,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail">
+      Dashboard
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail">
+      GameBoard
+    </Text>
+  </View>
+</View>
+`;

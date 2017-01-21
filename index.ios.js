@@ -5,8 +5,9 @@ import {
   Navigator,
   Text,
 } from 'react-native';
-import Intro from './src/components/intro';
 import { PATH } from './src/constants';
+import Intro from './src/components/intro';
+import GameScreen from './src/containers/gamescreen';
 
 export default class OneTo50 extends Component{
 
@@ -16,8 +17,8 @@ export default class OneTo50 extends Component{
     this.navigator = null;
   }
 
-  _pushScene = ( path, index )=>{
-    this.navigator.push({ path, index });
+  _pushScene = ( path )=>{
+    this.navigator.push({ path });
   }
 
   _popScene = ()=>{
@@ -25,6 +26,7 @@ export default class OneTo50 extends Component{
   }
 
   _onPressStart = ()=>{
+    this._pushScene( PATH.GAME_SCREEN );
   }
 
   _renderScene = ( route, navigator )=>{
@@ -34,6 +36,8 @@ export default class OneTo50 extends Component{
     switch( route.path ){
       case PATH.INTRO :
         return <Intro onPress={ this._onPressStart } />;
+      case PATH.GAME_SCREEN :
+        return <GameScreen />;
       default :
         return <Text>Not Found</Text>;
     }
@@ -42,7 +46,7 @@ export default class OneTo50 extends Component{
   render(){
     return (
       <Navigator
-        initialRoute={{ path: PATH.INTRO, index: 0 }}
+        initialRoute={{ path: PATH.INTRO }}
         renderScene={ this._renderScene }
       />
     );

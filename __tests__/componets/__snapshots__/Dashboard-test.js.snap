@@ -1,0 +1,16 @@
+exports[`Dashboard renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "skyblue",
+      "flex": 0.2,
+    }
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail">
+    Dashboard
+  </Text>
+</View>
+`;

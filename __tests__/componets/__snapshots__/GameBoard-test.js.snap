@@ -1,0 +1,15 @@
+exports[`GameBoard renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail">
+    GameBoard
+  </Text>
+</View>
+`;
