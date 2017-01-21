@@ -1,4 +1,6 @@
 export const PATH = {
   INTRO: 'INTRO',
   GAME_SCREEN: 'GAME_SCREEN',
+  GAME_START: 'GAME_START',
+  GAME_RESULT: 'GAME_RESULT',
 };

@@ -1,0 +1,16 @@
+exports[`GameResult renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "padding": 15,
+    }
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail">
+    Game Result
+  </Text>
+</View>
+`;

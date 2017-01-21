@@ -8,6 +8,7 @@ import {
 import { PATH } from './src/constants';
 import Intro from './src/components/intro';
 import GameScreen from './src/containers/gamescreen';
+import GameResult from './src/containers/gameresult';
 
 export default class OneTo50 extends Component{
 
@@ -38,6 +39,8 @@ export default class OneTo50 extends Component{
         return <Intro onPress={ this._onPressStart } />;
       case PATH.GAME_SCREEN :
         return <GameScreen />;
+      case PATH.GAME_RESULT :
+        return <GameResult />;
       default :
         return <Text>Not Found</Text>;
     }
