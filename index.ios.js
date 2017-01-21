@@ -1,49 +1,52 @@
 //@flow
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
+  Navigator,
   Text,
-  View,
 } from 'react-native';
+import Intro from './src/components/intro';
+import { PATH } from './src/constants';
 
 export default class OneTo50 extends Component{
+
+  constructor(){
+    super();
+    this.route = null;
+    this.navigator = null;
+  }
+
+  _pushScene = ( path, index )=>{
+    this.navigator.push({ path, index });
+  }
+
+  _popScene = ()=>{
+    this.navigator.pop();
+  }
+
+  _onPressStart = ()=>{
+  }
+
+  _renderScene = ( route, navigator )=>{
+    this.route = route;
+    this.navigator = navigator;
+
+    switch( route.path ){
+      case PATH.INTRO :
+        return <Intro onPress={ this._onPressStart } />;
+      default :
+        return <Text>Not Found</Text>;
+    }
+  }
+
   render(){
     return (
-      <View style={ styles.container }>
-        <Text style={ styles.welcome }>
-          Welcome to React Native!
-        </Text>
-        <Text style={ styles.instructions }>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={ styles.instructions }>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+      <Navigator
+        initialRoute={{ path: PATH.INTRO, index: 0 }}
+        renderScene={ this._renderScene }
+      />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
 
 AppRegistry.registerComponent( 'OneTo50', () => OneTo50 );
