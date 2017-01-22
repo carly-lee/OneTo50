@@ -1,4 +1,3 @@
-//@flow
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -10,27 +9,30 @@ import Intro from 'components/intro';
 import GameScreen from 'containers/gamescreen';
 import GameResult from 'containers/gameresult';
 
+//@flow
+type Route = { path: string };
+
 export default class OneTo50 extends Component{
+  route: ?Route = null;
+  navigator: ?Object = null;
 
   constructor(){
     super();
-    this.route = null;
-    this.navigator = null;
   }
 
-  _pushScene = ( path )=>{
-    this.navigator.push({ path });
+  _pushScene = ( path: string )=>{
+    if( this.navigator ){ this.navigator.push({ path });}
   }
 
   _popScene = ()=>{
-    this.navigator.pop();
+    if( this.navigator ){ this.navigator.pop(); }
   }
 
   _onPressStart = ()=>{
     this._pushScene( PATH.GAME_SCREEN );
   }
 
-  _renderScene = ( route, navigator )=>{
+  _renderScene = ( route: Route, navigator: Object )=>{
     this.route = route;
     this.navigator = navigator;
 

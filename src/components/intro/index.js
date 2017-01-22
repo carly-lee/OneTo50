@@ -1,12 +1,13 @@
-//@flow
-import React, { PureComponent, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
 
-export default class Intro extends PureComponent{
+//@flow
+type Props = {
+  onPress: () => void,
+};
 
-  static propTypes = {
-    onPress: PropTypes.func.isRequired,
-  }
+export default class Intro extends PureComponent{
+  props: Props;
 
   _onPressStart = ()=>{
     this.props.onPress();
