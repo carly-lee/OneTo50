@@ -9,7 +9,7 @@ type Props = {
 export default class Intro extends PureComponent{
   props: Props;
 
-  _onPressStart = ()=>{
+  _onPressStart = ():void =>{
     this.props.onPress();
   }
 

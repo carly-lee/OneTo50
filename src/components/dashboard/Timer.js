@@ -4,7 +4,6 @@ import { Text, View, StyleSheet } from 'react-native';
 //@flow
 export default class Timer extends PureComponent{
   timer: ?number = null;
-
   state: {
     currentTime: number,
   };
@@ -16,7 +15,7 @@ export default class Timer extends PureComponent{
   componentDidMount(){
     this.timer = setInterval(()=>{
       this.setState(( prevState )=>{
-        const currentTime = Number( prevState.currentTime ) + 0.01;
+        const currentTime:number = Number( prevState.currentTime ) + 0.01;
         return { currentTime: currentTime.toFixed( 2 ) };
       });
     }, 10 );

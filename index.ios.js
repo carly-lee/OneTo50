@@ -16,19 +16,19 @@ export default class OneTo50 extends Component{
   route: ?Route = null;
   navigator: ?Object = null;
 
-  _pushScene = ( path: string )=>{
+  _pushScene = ( path: string ):void =>{
     if( this.navigator ){ this.navigator.push({ path });}
   }
 
-  _popScene = ()=>{
+  _popScene = ():void =>{
     if( this.navigator ){ this.navigator.pop(); }
   }
 
-  _onPressStart = ()=>{
+  _onPressStart = ():void =>{
     this._pushScene( PATH.GAME_SCREEN );
   }
 
-  _renderScene = ( route: Route, navigator: Object )=>{
+  _renderScene = ( route: Route, navigator: Object ):React.Element =>{
     this.route = route;
     this.navigator = navigator;
 

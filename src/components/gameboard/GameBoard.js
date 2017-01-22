@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
 import { PlayBoard } from 'components/gameboard';
 

@@ -4,6 +4,7 @@
 	"private": true,
 	"scripts": {
 		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"flow": "flow; test $? -eq 0 -o $? -eq 2",
 		"test": "jest"
 	},
 	"dependencies": {
@@ -16,7 +17,7 @@
 		"babel-plugin-transform-flow-strip-types": "^6.22.0",
 		"babel-preset-react-native": "^1.9.1",
 		"enzyme": "^2.7.0",
-		"flow-bin": "^0.36.0",
+		"flow-bin": "^0.38.0",
 		"jest": "^18.1.0",
 		"react-native-mock": "^0.2.9",
 		"react-test-renderer": "^15.4.0-rc.4"

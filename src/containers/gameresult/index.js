@@ -1,7 +1,7 @@
-//@flow
-import React, { PureComponent, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
+//@flow
 export default class GameResult extends PureComponent{
   render(){
     return(

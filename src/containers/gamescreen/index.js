@@ -1,4 +1,4 @@
-import React, { PureComponent, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
 import { Dashboard } from 'components/dashboard';

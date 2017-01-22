@@ -5,10 +5,14 @@ import { NumberButton } from 'components/gameboard';
 
 //@flow
 export default class PlayBoard extends PureComponent{
-  _getNumbers = ()=>{
+  _onClickNumber = ( num: number ):void =>{
+    console.debug( 'PlayBoard._onClickNumber:', num );
+  }
+
+  _getNumbers = ():Array<NumberButton> =>{
     let buttons:Array<NumberButton> = [];
     for( let i = 0; i<25; i++ ){
-      buttons.push( <NumberButton key={ i } number={ i+1 } /> );
+      buttons.push( <NumberButton key={ i } number={ i+1 } onClickNumber={ this._onClickNumber } /> );
     }
     return buttons;
   }
