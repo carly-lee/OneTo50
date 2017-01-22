@@ -8,6 +8,8 @@ before_install:
   - brew update
   - brew reinstall xctool
   - brew reinstall watchman
+  - brew install yarn
+install: 
   - yarn install
 script:
   - yarn test
