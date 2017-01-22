@@ -2,8 +2,8 @@
 import React, { PureComponent, PropTypes } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
-import { Dashboard } from '../../components/dashboard';
-import { GameBoard } from '../../components/gameboard';
+import { Dashboard } from 'components/dashboard';
+import { GameBoard } from 'components/gameboard';
 
 export default class GameScreen extends PureComponent{
   render(){

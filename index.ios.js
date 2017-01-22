@@ -5,10 +5,10 @@ import {
   Navigator,
   Text,
 } from 'react-native';
-import { PATH } from './src/constants';
-import Intro from './src/components/intro';
-import GameScreen from './src/containers/gamescreen';
-import GameResult from './src/containers/gameresult';
+import { PATH } from 'constants';
+import Intro from 'components/intro';
+import GameScreen from 'containers/gamescreen';
+import GameResult from 'containers/gameresult';
 
 export default class OneTo50 extends Component{
 

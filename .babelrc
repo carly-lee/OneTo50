@@ -1,4 +1,8 @@
 {
 "presets": ["react-native"],
-"plugins": ["transform-flow-strip-types"]
+"plugins": ["transform-flow-strip-types",
+            ["module-resolver", {
+                  "root": ["./src"]
+                }]
+    ]
 }
