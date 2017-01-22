@@ -1,11 +1,11 @@
 import 'react-native';
 import React from 'react';
-import { NextNumber } from 'components/dashboard';
+import { PlayBoard } from 'components/gameboard';
 import renderer from 'react-test-renderer';
 
-describe( 'NextNumber', ()=>{
+describe( 'PlayBoard', ()=>{
   it( 'renders correctly',()=>{
-    const tree = renderer.create( <NextNumber number={ 1 } /> );
+    const tree = renderer.create( <PlayBoard /> );
     expect( tree ).toMatchSnapshot();
   });
 });

@@ -1,13 +1,23 @@
 import React, { PureComponent } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 //@flow
+type Props = {
+  number: number,
+};
+
 export default class NumberButton extends PureComponent{
+  props: Props;
+
+  _onPress = ()=>{
+    console.debug( this.props.number );
+  }
+
   render(){
     return(
-      <View style={ styles.container }>
-        <Text>1</Text>
-      </View>
+      <TouchableOpacity style={ styles.container } onPress={ this._onPress }>
+        <Text style={ styles.number }>{ this.props.number }</Text>
+      </TouchableOpacity>
     );
   }
 }
@@ -15,5 +25,16 @@ export default class NumberButton extends PureComponent{
 const styles = StyleSheet.create({
   container: {
     flex: 0,
+    width: 70,
+    height: 70,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'white',
+  },
+  number: {
+    fontSize: 24,
+    fontWeight: 'bold',
   },
 });

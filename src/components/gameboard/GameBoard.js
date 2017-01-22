@@ -1,12 +1,14 @@
-//@flow
-import React, { PureComponent, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
+import { PlayBoard } from 'components/gameboard';
+
+//@flow
 export default class GameBoard extends PureComponent{
   render(){
     return(
       <View style={ styles.container }>
-        <Text>GameBoard</Text>
+        <PlayBoard />
       </View>
     );
   }

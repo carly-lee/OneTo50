@@ -9,7 +9,7 @@ export default class Dashboard extends PureComponent{
     return(
       <View style={ styles.container }>
         <Timer />
-        <NextNumber />
+        <NextNumber number={ 1 } />
       </View>
     );
   }

@@ -1,2 +1,3 @@
 export { default as GameBoard } from './GameBoard';
+export { default as PlayBoard } from './PlayBoard';
 export { default as NumberButton } from './NumberButton';

@@ -2,11 +2,17 @@ import React, { PureComponent } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
 //@flow
+type Props = {
+  number: number,
+};
+
 export default class NextNumber extends PureComponent{
+  props: Props;
+
   render(){
     return(
       <View style={ styles.container }>
-        <Text>1</Text>
+        <Text>{this.props.number}</Text>
       </View>
     );
   }
