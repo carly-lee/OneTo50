@@ -4,13 +4,42 @@ exports[`Dashboard renders correctly 1`] = `
     Object {
       "backgroundColor": "skyblue",
       "flex": 0.2,
+      "flexDirection": "row",
+      "justifyContent": "space-between",
     }
   }>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail">
-    Dashboard
-  </Text>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "pink",
+        "flex": 0.6,
+        "flexDirection": "column",
+        "justifyContent": "center",
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail">
+      0
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0.4,
+        "flexDirection": "column",
+        "justifyContent": "center",
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail">
+      1
+    </Text>
+  </View>
 </View>
 `;

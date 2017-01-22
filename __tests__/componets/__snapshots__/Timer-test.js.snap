@@ -1,0 +1,19 @@
+exports[`Timer renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "pink",
+      "flex": 0.6,
+      "flexDirection": "column",
+      "justifyContent": "center",
+    }
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail">
+    0
+  </Text>
+</View>
+`;

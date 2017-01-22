@@ -1,0 +1,18 @@
+exports[`NextNumber renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 0.4,
+      "flexDirection": "column",
+      "justifyContent": "center",
+    }
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail">
+    1
+  </Text>
+</View>
+`;

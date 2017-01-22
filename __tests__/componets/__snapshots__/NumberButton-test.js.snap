@@ -1,0 +1,15 @@
+exports[`NumberButton renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 0,
+    }
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail">
+    1
+  </Text>
+</View>
+`;

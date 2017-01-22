@@ -16,10 +16,6 @@ export default class OneTo50 extends Component{
   route: ?Route = null;
   navigator: ?Object = null;
 
-  constructor(){
-    super();
-  }
-
   _pushScene = ( path: string )=>{
     if( this.navigator ){ this.navigator.push({ path });}
   }
