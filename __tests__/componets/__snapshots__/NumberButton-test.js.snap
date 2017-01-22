@@ -1,15 +1,40 @@
 exports[`NumberButton renders correctly 1`] = `
 <View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  hitSlop={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Object {
+      "alignItems": "center",
+      "borderColor": "white",
+      "borderWidth": 1,
       "flex": 0,
+      "flexDirection": "column",
+      "height": 70,
+      "justifyContent": "center",
+      "opacity": 1,
+      "width": 70,
     }
-  }>
+  }
+  testID={undefined}>
   <Text
     accessible={true}
     allowFontScaling={true}
-    ellipsizeMode="tail">
-    1
-  </Text>
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 24,
+        "fontWeight": "bold",
+      }
+    } />
 </View>
 `;
