@@ -5,22 +5,52 @@ import { NumberButton } from 'components/gameboard';
 
 //@flow
 export default class PlayBoard extends PureComponent{
-  _onClickNumber = ( num: number ):void =>{
-    console.debug( 'PlayBoard._onClickNumber:', num );
+  allNumbers:Array<number> = [];
+
+  state: {
+    buttons:?Array<NumberButton>
+  };
+
+  constructor( props ){
+    super( props );
+    for( let i=0; i<50; i++ ){
+      this.allNumbers.push( i+1 );
+    }
+    this.state = {
+      buttons: null,
+    };
   }
 
-  _getNumbers = ():Array<NumberButton> =>{
+  componentWillMount(){
     let buttons:Array<NumberButton> = [];
+    let n:number;
     for( let i = 0; i<25; i++ ){
-      buttons.push( <NumberButton key={ i } number={ i+1 } onClickNumber={ this._onClickNumber } /> );
+      n = this.allNumbers.splice( 0,1 )[0];
+      buttons.push( <NumberButton key={ i } number={ n } index={ i } onClickNumber={ this._onClickNumber } clickable={ false } /> );
     }
-    return buttons;
+    this.setState({ buttons });
+  }
+
+  _onClickNumber = ( num:number, index:number ):void =>{
+    if( this.allNumbers.length > 0 ){
+      this._assignNextNumber( index );
+    }else{
+      console.debug( 'disappear numbers' );
+    }
+  }
+
+  _assignNextNumber = ( index:number )=>{
+    const next:number = this.allNumbers.splice( 0,1 )[0];
+    let buttons = [...this.state.buttons];
+    const newButton:NumberButton = React.cloneElement( buttons[index], { number: next });
+    buttons.splice( index, 1, newButton );
+    this.setState({ buttons });
   }
 
   render(){
     return(
       <View style={ styles.container }>
-        { this._getNumbers() }
+      { this.state.buttons }
       </View>
     );
   }

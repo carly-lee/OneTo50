@@ -4,6 +4,8 @@ import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 //@flow
 type Props = {
   number: number,
+  index: number,
+  clickable: boolean,
   onClickNumber: ( num: number ) => void,
 };
 
@@ -11,7 +13,9 @@ export default class NumberButton extends PureComponent{
   props: Props;
 
   _onPress = ():void =>{
-    this.props.onClickNumber( this.props.number );
+    if( this.props.clickable ){
+      this.props.onClickNumber( this.props.number , this.props.index );
+    }
   }
 
   render(){
