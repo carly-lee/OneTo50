@@ -37,9 +37,7 @@ exports[`Dashboard renders correctly 1`] = `
     <Text
       accessible={true}
       allowFontScaling={true}
-      ellipsizeMode="tail">
-      1
-    </Text>
+      ellipsizeMode="tail" />
   </View>
 </View>
 `;

@@ -1,17 +1,34 @@
 import React, { PureComponent } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
 import { Dashboard } from 'components/dashboard';
-import { GameBoard } from 'components/gameboard';
+import { PlayBoard } from 'components/gameboard';
 
 //@flow
 export default class GameScreen extends PureComponent{
+
+  state: {
+    nextNumber:number,
+  };
+
+  constructor( props ){
+    super( props );
+    this.state = {
+      nextNumber: 1,
+    };
+  }
+
+  _onNumberClick = ( next:number )=>{
+    this.setState({ nextNumber: next });
+  }
+
   render(){
+    const { nextNumber } = this.state;
+
     return(
       <View style={ styles.container }>
-        <Text>Game Screen</Text>
-        <Dashboard />
-        <GameBoard />
+        <Dashboard nextNumber={ nextNumber } />
+        <PlayBoard nextNumber={ nextNumber } onNumberClick={ this._onNumberClick } />
       </View>
     );
   }

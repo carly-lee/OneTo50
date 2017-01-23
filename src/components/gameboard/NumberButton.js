@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity, View } from 'react-native';
 
 //@flow
 type Props = {
@@ -18,12 +18,28 @@ export default class NumberButton extends PureComponent{
     }
   }
 
-  render(){
+  _getClickableElement= ()=>{
     return(
       <TouchableOpacity style={ styles.container } onPress={ this._onPress }>
         <Text style={ styles.number }>{ this.props.number }</Text>
       </TouchableOpacity>
     );
+  }
+
+  _getUnclickableElement= ()=>{
+    return(
+      <View style={ styles.container }>
+        <Text style={ styles.number }>{ this.props.number }</Text>
+      </View>
+    );
+  }
+
+  render(){
+    if( this.props.clickable ){
+      return this._getClickableElement();
+    }else{
+      return this._getUnclickableElement();
+    }
   }
 }
 

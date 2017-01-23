@@ -4,7 +4,13 @@ import { View, StyleSheet } from 'react-native';
 import { NumberButton } from 'components/gameboard';
 
 //@flow
+type Props = {
+  nextNumber: number,
+  onNumberClick: ( num: number ) => void,
+};
+
 export default class PlayBoard extends PureComponent{
+  props:Props;
   allNumbers:Array<number> = [];
 
   state: {
@@ -26,25 +32,40 @@ export default class PlayBoard extends PureComponent{
     let n:number;
     for( let i = 0; i<25; i++ ){
       n = this.allNumbers.splice( 0,1 )[0];
-      buttons.push( <NumberButton key={ i } number={ n } index={ i } onClickNumber={ this._onClickNumber } clickable={ false } /> );
+      buttons.push( <NumberButton key={ i } number={ n } index={ i } onClickNumber={ this._onClickNumber } clickable={ n === this.props.nextNumber } /> );
     }
     this.setState({ buttons });
   }
 
   _onClickNumber = ( num:number, index:number ):void =>{
+    const next = num + 1;
+    let newButtons;
     if( this.allNumbers.length > 0 ){
-      this._assignNextNumber( index );
+      newButtons = this._assignNextNumber( index );
     }else{
       console.debug( 'disappear numbers' );
     }
+    this.props.onNumberClick( next );
+    this._makeButtonClickable( next, newButtons );
   }
 
-  _assignNextNumber = ( index:number )=>{
+  _assignNextNumber = ( index:number ):Array<NumberButton>=>{
     const next:number = this.allNumbers.splice( 0,1 )[0];
     let buttons = [...this.state.buttons];
     const newButton:NumberButton = React.cloneElement( buttons[index], { number: next });
     buttons.splice( index, 1, newButton );
-    this.setState({ buttons });
+    return buttons;
+  }
+
+  _makeButtonClickable = ( next:number, buttons:Array<NumberButton> )=>{
+    const newButtons = buttons.map(( btn )=>{
+        if( btn.props.number === next ){
+          return React.cloneElement( btn, { clickable: true });
+        }else{
+          return btn;
+        }
+      });
+    this.setState({ buttons: newButtons });
   }
 
   render(){
