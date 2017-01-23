@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { View, StyleSheet } from 'react-native';
 
 import { NumberButton } from 'components/gameboard';
+import { shuffleArray } from 'utils';
 
 //@flow
 type Props = {
@@ -19,8 +20,8 @@ export default class PlayBoard extends PureComponent{
 
   constructor( props ){
     super( props );
-    for( let i=0; i<50; i++ ){
-      this.allNumbers.push( i+1 );
+    for( let i=1; i<25; i++ ){
+      this.allNumbers.push( i+25 );
     }
     this.state = {
       buttons: null,
@@ -28,10 +29,16 @@ export default class PlayBoard extends PureComponent{
   }
 
   componentWillMount(){
+    let initNumbers:Array<NumberButton> = [];
+    for( let i=1; i<=25; i++ ){
+      initNumbers.push( i );
+    }
+    initNumbers = shuffleArray( initNumbers );
+
     let buttons:Array<NumberButton> = [];
     let n:number;
     for( let i = 0; i<25; i++ ){
-      n = this.allNumbers.splice( 0,1 )[0];
+      n = initNumbers[i];
       buttons.push( <NumberButton key={ i } number={ n } index={ i } onClickNumber={ this._onClickNumber } clickable={ n === this.props.nextNumber } /> );
     }
     this.setState({ buttons });
