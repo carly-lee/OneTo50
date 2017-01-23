@@ -65,7 +65,7 @@ exports[`GameBoard renders correctly 1`] = `
             "fontWeight": "bold",
           }
         }>
-        2
+        12
       </Text>
     </View>
     <View
@@ -91,7 +91,215 @@ exports[`GameBoard renders correctly 1`] = `
             "fontWeight": "bold",
           }
         }>
-        3
+        20
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "white",
+          "borderWidth": 1,
+          "flex": 0,
+          "flexDirection": "column",
+          "height": 70,
+          "justifyContent": "center",
+          "width": 70,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }>
+        7
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "white",
+          "borderWidth": 1,
+          "flex": 0,
+          "flexDirection": "column",
+          "height": 70,
+          "justifyContent": "center",
+          "width": 70,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }>
+        19
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "white",
+          "borderWidth": 1,
+          "flex": 0,
+          "flexDirection": "column",
+          "height": 70,
+          "justifyContent": "center",
+          "width": 70,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }>
+        22
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "white",
+          "borderWidth": 1,
+          "flex": 0,
+          "flexDirection": "column",
+          "height": 70,
+          "justifyContent": "center",
+          "width": 70,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }>
+        17
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "white",
+          "borderWidth": 1,
+          "flex": 0,
+          "flexDirection": "column",
+          "height": 70,
+          "justifyContent": "center",
+          "width": 70,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }>
+        10
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "white",
+          "borderWidth": 1,
+          "flex": 0,
+          "flexDirection": "column",
+          "height": 70,
+          "justifyContent": "center",
+          "width": 70,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }>
+        16
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "white",
+          "borderWidth": 1,
+          "flex": 0,
+          "flexDirection": "column",
+          "height": 70,
+          "justifyContent": "center",
+          "width": 70,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }>
+        11
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "white",
+          "borderWidth": 1,
+          "flex": 0,
+          "flexDirection": "column",
+          "height": 70,
+          "justifyContent": "center",
+          "width": 70,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }>
+        23
       </Text>
     </View>
     <View
@@ -118,6 +326,188 @@ exports[`GameBoard renders correctly 1`] = `
           }
         }>
         4
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "white",
+          "borderWidth": 1,
+          "flex": 0,
+          "flexDirection": "column",
+          "height": 70,
+          "justifyContent": "center",
+          "width": 70,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }>
+        15
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "white",
+          "borderWidth": 1,
+          "flex": 0,
+          "flexDirection": "column",
+          "height": 70,
+          "justifyContent": "center",
+          "width": 70,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }>
+        13
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "white",
+          "borderWidth": 1,
+          "flex": 0,
+          "flexDirection": "column",
+          "height": 70,
+          "justifyContent": "center",
+          "width": 70,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }>
+        21
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "white",
+          "borderWidth": 1,
+          "flex": 0,
+          "flexDirection": "column",
+          "height": 70,
+          "justifyContent": "center",
+          "width": 70,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }>
+        14
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "white",
+          "borderWidth": 1,
+          "flex": 0,
+          "flexDirection": "column",
+          "height": 70,
+          "justifyContent": "center",
+          "width": 70,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }>
+        18
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "white",
+          "borderWidth": 1,
+          "flex": 0,
+          "flexDirection": "column",
+          "height": 70,
+          "justifyContent": "center",
+          "width": 70,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }>
+        24
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "white",
+          "borderWidth": 1,
+          "flex": 0,
+          "flexDirection": "column",
+          "height": 70,
+          "justifyContent": "center",
+          "width": 70,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }>
+        2
       </Text>
     </View>
     <View
@@ -195,7 +585,7 @@ exports[`GameBoard renders correctly 1`] = `
             "fontWeight": "bold",
           }
         }>
-        7
+        9
       </Text>
     </View>
     <View
@@ -247,423 +637,33 @@ exports[`GameBoard renders correctly 1`] = `
             "fontWeight": "bold",
           }
         }>
-        9
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "borderColor": "white",
-          "borderWidth": 1,
-          "flex": 0,
-          "flexDirection": "column",
-          "height": 70,
-          "justifyContent": "center",
-          "width": 70,
-        }
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "fontSize": 24,
-            "fontWeight": "bold",
-          }
-        }>
-        10
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "borderColor": "white",
-          "borderWidth": 1,
-          "flex": 0,
-          "flexDirection": "column",
-          "height": 70,
-          "justifyContent": "center",
-          "width": 70,
-        }
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "fontSize": 24,
-            "fontWeight": "bold",
-          }
-        }>
-        11
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "borderColor": "white",
-          "borderWidth": 1,
-          "flex": 0,
-          "flexDirection": "column",
-          "height": 70,
-          "justifyContent": "center",
-          "width": 70,
-        }
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "fontSize": 24,
-            "fontWeight": "bold",
-          }
-        }>
-        12
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "borderColor": "white",
-          "borderWidth": 1,
-          "flex": 0,
-          "flexDirection": "column",
-          "height": 70,
-          "justifyContent": "center",
-          "width": 70,
-        }
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "fontSize": 24,
-            "fontWeight": "bold",
-          }
-        }>
-        13
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "borderColor": "white",
-          "borderWidth": 1,
-          "flex": 0,
-          "flexDirection": "column",
-          "height": 70,
-          "justifyContent": "center",
-          "width": 70,
-        }
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "fontSize": 24,
-            "fontWeight": "bold",
-          }
-        }>
-        14
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "borderColor": "white",
-          "borderWidth": 1,
-          "flex": 0,
-          "flexDirection": "column",
-          "height": 70,
-          "justifyContent": "center",
-          "width": 70,
-        }
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "fontSize": 24,
-            "fontWeight": "bold",
-          }
-        }>
-        15
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "borderColor": "white",
-          "borderWidth": 1,
-          "flex": 0,
-          "flexDirection": "column",
-          "height": 70,
-          "justifyContent": "center",
-          "width": 70,
-        }
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "fontSize": 24,
-            "fontWeight": "bold",
-          }
-        }>
-        16
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "borderColor": "white",
-          "borderWidth": 1,
-          "flex": 0,
-          "flexDirection": "column",
-          "height": 70,
-          "justifyContent": "center",
-          "width": 70,
-        }
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "fontSize": 24,
-            "fontWeight": "bold",
-          }
-        }>
-        17
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "borderColor": "white",
-          "borderWidth": 1,
-          "flex": 0,
-          "flexDirection": "column",
-          "height": 70,
-          "justifyContent": "center",
-          "width": 70,
-        }
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "fontSize": 24,
-            "fontWeight": "bold",
-          }
-        }>
-        18
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "borderColor": "white",
-          "borderWidth": 1,
-          "flex": 0,
-          "flexDirection": "column",
-          "height": 70,
-          "justifyContent": "center",
-          "width": 70,
-        }
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "fontSize": 24,
-            "fontWeight": "bold",
-          }
-        }>
-        19
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "borderColor": "white",
-          "borderWidth": 1,
-          "flex": 0,
-          "flexDirection": "column",
-          "height": 70,
-          "justifyContent": "center",
-          "width": 70,
-        }
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "fontSize": 24,
-            "fontWeight": "bold",
-          }
-        }>
-        20
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "borderColor": "white",
-          "borderWidth": 1,
-          "flex": 0,
-          "flexDirection": "column",
-          "height": 70,
-          "justifyContent": "center",
-          "width": 70,
-        }
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "fontSize": 24,
-            "fontWeight": "bold",
-          }
-        }>
-        21
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "borderColor": "white",
-          "borderWidth": 1,
-          "flex": 0,
-          "flexDirection": "column",
-          "height": 70,
-          "justifyContent": "center",
-          "width": 70,
-        }
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "fontSize": 24,
-            "fontWeight": "bold",
-          }
-        }>
-        22
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "borderColor": "white",
-          "borderWidth": 1,
-          "flex": 0,
-          "flexDirection": "column",
-          "height": 70,
-          "justifyContent": "center",
-          "width": 70,
-        }
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "fontSize": 24,
-            "fontWeight": "bold",
-          }
-        }>
-        23
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "borderColor": "white",
-          "borderWidth": 1,
-          "flex": 0,
-          "flexDirection": "column",
-          "height": 70,
-          "justifyContent": "center",
-          "width": 70,
-        }
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "fontSize": 24,
-            "fontWeight": "bold",
-          }
-        }>
-        24
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "borderColor": "white",
-          "borderWidth": 1,
-          "flex": 0,
-          "flexDirection": "column",
-          "height": 70,
-          "justifyContent": "center",
-          "width": 70,
-        }
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "fontSize": 24,
-            "fontWeight": "bold",
-          }
-        }>
         25
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "white",
+          "borderWidth": 1,
+          "flex": 0,
+          "flexDirection": "column",
+          "height": 70,
+          "justifyContent": "center",
+          "width": 70,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 24,
+            "fontWeight": "bold",
+          }
+        }>
+        3
       </Text>
     </View>
   </View>
