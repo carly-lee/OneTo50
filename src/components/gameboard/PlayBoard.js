@@ -39,40 +39,35 @@ export default class PlayBoard extends PureComponent{
     let n:number;
     for( let i = 0; i<25; i++ ){
       n = initNumbers[i];
-      buttons.push( <NumberButton key={ i } number={ n } index={ i } onClickNumber={ this._onClickNumber } clickable={ n === this.props.nextNumber } /> );
+      buttons.push( <NumberButton key={ i } number={ n } index={ i } nextNumber={ this.props.nextNumber } onClickNumber={ this._onClickNumber }  /> );
     }
     this.setState({ buttons });
   }
 
   _onClickNumber = ( num:number, index:number ):void =>{
-    const next = num + 1;
-    let newButtons;
+    const nextClick = num + 1;
     if( this.allNumbers.length > 0 ){
-      newButtons = this._assignNextNumber( index );
+      const newButtons = this._assignNextNumber( index, nextClick );
+      this.setState({ buttons: newButtons });
     }else{
       console.debug( 'disappear numbers' );
     }
-    this.props.onNumberClick( next );
-    this._makeButtonClickable( next, newButtons );
+    this.props.onNumberClick( nextClick );
   }
 
-  _assignNextNumber = ( index:number ):Array<NumberButton>=>{
+  _assignNextNumber = ( index:number, nextClick:number ):Array<NumberButton>=>{
     const next:number = this.allNumbers.splice( 0,1 )[0];
-    let buttons = [...this.state.buttons];
-    const newButton:NumberButton = React.cloneElement( buttons[index], { number: next });
-    buttons.splice( index, 1, newButton );
-    return buttons;
-  }
-
-  _makeButtonClickable = ( next:number, buttons:Array<NumberButton> )=>{
-    const newButtons = buttons.map(( btn )=>{
-        if( btn.props.number === next ){
-          return React.cloneElement( btn, { clickable: true });
-        }else{
-          return btn;
-        }
-      });
-    this.setState({ buttons: newButtons });
+    const { buttons } = this.state;
+    const len:number = buttons.length;
+    let newButtons:Array<NumberButton> = [];
+    for( let i = 0; i<len; i++ ){
+      if( i === index ){
+        newButtons.push( React.cloneElement( buttons[i], { number: next, nextNumber: nextClick }));
+      }else{
+        newButtons.push( React.cloneElement( buttons[i], { nextNumber: nextClick }));
+      }
+    }
+    return newButtons;
   }
 
   render(){

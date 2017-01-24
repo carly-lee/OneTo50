@@ -5,7 +5,7 @@ import { Text, StyleSheet, TouchableOpacity, View } from 'react-native';
 type Props = {
   number: number,
   index: number,
-  clickable: boolean,
+  nextNumber: number,
   onClickNumber: ( num: number ) => void,
 };
 
@@ -13,9 +13,7 @@ export default class NumberButton extends PureComponent{
   props: Props;
 
   _onPress = ():void =>{
-    if( this.props.clickable ){
-      this.props.onClickNumber( this.props.number , this.props.index );
-    }
+    this.props.onClickNumber( this.props.number , this.props.index );
   }
 
   _getClickableElement= ()=>{
@@ -35,7 +33,9 @@ export default class NumberButton extends PureComponent{
   }
 
   render(){
-    if( this.props.clickable ){
+    const{ number, nextNumber } = this.props;
+
+    if( number === nextNumber ){
       return this._getClickableElement();
     }else{
       return this._getUnclickableElement();
