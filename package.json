@@ -5,6 +5,7 @@
 	"scripts": {
 		"start": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
 		"flow": "node_modules/.bin/flow",
+		"flow-stop": "node_modules/.bin/flow stop",
 		"test": "jest"
 	},
 	"dependencies": {
