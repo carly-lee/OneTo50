@@ -1,0 +1,14 @@
+exports[`EmptyButton renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "flex": 0,
+      "flexDirection": "column",
+      "height": 70,
+      "justifyContent": "center",
+      "width": 70,
+    }
+  } />
+`;
