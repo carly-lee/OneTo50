@@ -5,7 +5,12 @@ import { Dashboard } from 'components/dashboard';
 import { PlayBoard } from 'components/gameboard';
 
 //@flow
+type Props = {
+  showResult: ( time:number ) => void,
+};
+
 export default class GameScreen extends PureComponent{
+  props:Props;
 
   state: {
     nextNumber:number,
@@ -22,12 +27,16 @@ export default class GameScreen extends PureComponent{
     this.setState({ nextNumber: next });
   }
 
+  _reportFinalTime = ( time:number )=>{
+    this.props.showResult( time );
+  }
+
   render(){
     const { nextNumber } = this.state;
 
     return(
       <View style={ styles.container }>
-        <Dashboard nextNumber={ nextNumber } />
+        <Dashboard nextNumber={ nextNumber } reportFinalTime={ this._reportFinalTime } />
         <PlayBoard nextNumber={ nextNumber } onNumberClick={ this._onNumberClick } />
       </View>
     );

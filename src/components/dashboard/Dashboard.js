@@ -6,6 +6,7 @@ import { Timer, NextNumber } from 'components/dashboard';
 //@flow
 type Props = {
   nextNumber: number,
+  reportFinalTime: ( time:number )=> void,
 };
 
 export default class Dashboard extends PureComponent{
@@ -14,7 +15,7 @@ export default class Dashboard extends PureComponent{
   render(){
     return(
       <View style={ styles.container }>
-        <Timer />
+        <Timer { ...this.props } />
         <NextNumber number={ this.props.nextNumber } />
       </View>
     );

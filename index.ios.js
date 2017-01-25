@@ -16,8 +16,8 @@ export default class OneTo50 extends Component{
   route: ?Route = null;
   navigator: ?Object = null;
 
-  _pushScene = ( path: string ):void =>{
-    if( this.navigator ){ this.navigator.push({ path });}
+  _pushScene = ( path: string, obj: ?Object ):void =>{
+    if( this.navigator ){ this.navigator.push({ path, ...obj });}
   }
 
   _popScene = ():void =>{
@@ -28,6 +28,10 @@ export default class OneTo50 extends Component{
     this._pushScene( PATH.GAME_SCREEN );
   }
 
+  _showResult = ( finalTime: number ):void =>{
+    this._pushScene( PATH.GAME_RESULT, { finalTime });
+  }
+
   _renderScene = ( route: Route, navigator: Object ):React.Element =>{
     this.route = route;
     this.navigator = navigator;
@@ -36,9 +40,9 @@ export default class OneTo50 extends Component{
       case PATH.INTRO :
         return <Intro onPress={ this._onPressStart } />;
       case PATH.GAME_SCREEN :
-        return <GameScreen />;
+        return <GameScreen showResult={ this._showResult } />;
       case PATH.GAME_RESULT :
-        return <GameResult />;
+        return <GameResult finalTime={ route.finalTime } />;
       default :
         return <Text>Not Found</Text>;
     }

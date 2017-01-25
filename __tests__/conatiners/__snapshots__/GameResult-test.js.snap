@@ -2,15 +2,23 @@ exports[`GameResult renders correctly 1`] = `
 <View
   style={
     Object {
+      "alignItems": "center",
       "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "center",
       "padding": 15,
     }
   }>
   <Text
     accessible={true}
     allowFontScaling={true}
-    ellipsizeMode="tail">
-    Game Result
-  </Text>
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 48,
+        "fontWeight": "bold",
+        "textAlign": "center",
+      }
+    } />
 </View>
 `;

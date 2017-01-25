@@ -41,11 +41,11 @@ export default class PlayBoard extends PureComponent{
 
   _onClickNumber = ( num:number, index:number ):void =>{
     const nextClick = num + 1;
+    console.debug( '_onClickNumber:', nextClick );
     let newButtons:Array<NumberButton>;
     if( this.allNumbers.length > 0 ){
       newButtons = this._getButtons( index, nextClick );
     }else{
-      console.debug( 'disappear numbers' );
       newButtons = this._disappearButtons( index, nextClick );
     }
     this.setState({ buttons: newButtons });
