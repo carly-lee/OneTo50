@@ -29,7 +29,6 @@ export default class Timer extends PureComponent{
   componentDidMount(){
     this.timer = setInterval(()=>{
       this.setState(( prevState )=>{
-        console.debug( 'timer' );
         const currentTime:number = Number( prevState.currentTime ) + 0.01;
         return { currentTime: currentTime.toFixed( 2 ) };
       });

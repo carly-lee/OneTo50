@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
-import { Text, StyleSheet, TouchableOpacity, View } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
+import { ClickableButton, UnClickableButton } from 'components/gameboard';
 
 //@flow
 type Props = {
@@ -16,29 +17,14 @@ export default class NumberButton extends PureComponent{
     this.props.onClickNumber( this.props.number , this.props.index );
   }
 
-  _getClickableElement= ()=>{
-    return(
-      <TouchableOpacity style={ styles.container } onPress={ this._onPress }>
-        <Text style={ styles.number }>{ this.props.number }</Text>
-      </TouchableOpacity>
-    );
-  }
-
-  _getUnclickableElement= ()=>{
-    return(
-      <View style={ styles.container }>
-        <Text style={ styles.number }>{ this.props.number }</Text>
-      </View>
-    );
-  }
-
   render(){
     const{ number, nextNumber } = this.props;
+    const child:React.Element = <Text style={ styles.number }>{ this.props.number }</Text>;
 
     if( number === nextNumber ){
-      return this._getClickableElement();
+      return <ClickableButton style={styles.container} child={child} onPress={this._onPress} />;
     }else{
-      return this._getUnclickableElement();
+      return <UnClickableButton style={styles.container} child={child} />;
     }
   }
 }
