@@ -1,17 +1,28 @@
 import React, { PureComponent } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Button } from 'react-native';
 
 //@flow
 type Props = {
-  finalTime:number,
+  finalTime:string,
+  onRestart:()=>void,
 };
 export default class GameResult extends PureComponent{
   props:Props;
+
+  _onPressReStart = ()=>{
+    this.props.onRestart();
+  }
 
   render(){
     return(
       <View style={ styles.container }>
         <Text style={ styles.result }>{ this.props.finalTime }</Text>
+        <Button
+          onPress={ this._onPressReStart }
+          title="Restart"
+          color="#841584"
+          accessibilityLabel="Restart"
+        />
       </View>
     );
   }

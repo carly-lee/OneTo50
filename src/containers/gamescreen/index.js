@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Button } from 'react-native';
 
 import { Dashboard } from 'components/dashboard';
 import { PlayBoard } from 'components/gameboard';
@@ -7,6 +7,7 @@ import { PlayBoard } from 'components/gameboard';
 //@flow
 type Props = {
   showResult: ( time:number ) => void,
+  onRestart:()=>void,
 };
 
 export default class GameScreen extends PureComponent{
@@ -31,6 +32,10 @@ export default class GameScreen extends PureComponent{
     this.props.showResult( time );
   }
 
+  _onPressReStart = ()=>{
+    this.props.onRestart();
+  }
+
   render(){
     const { nextNumber } = this.state;
 
@@ -38,6 +43,12 @@ export default class GameScreen extends PureComponent{
       <View style={ styles.container }>
         <Dashboard nextNumber={ nextNumber } reportFinalTime={ this._reportFinalTime } />
         <PlayBoard nextNumber={ nextNumber } onNumberClick={ this._onNumberClick } />
+        <Button
+          onPress={ this._onPressReStart }
+          title="Restart"
+          color="#841584"
+          accessibilityLabel="Restart"
+        />
       </View>
     );
   }

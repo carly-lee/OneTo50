@@ -26,9 +26,7 @@ export default class PlayBoard extends PureComponent{
       this.allNumbers.push( i+26 );
       buttons.push( <NumberButton key={ i } number={ initNumbers[i] } index={ i } nextNumber={ this.props.nextNumber } onClickNumber={ this._onClickNumber }  /> );
     }
-    this.state = {
-      buttons,
-    };
+    this.state = { buttons };
   }
 
   _getShuffledNumbers = ():Array<number>=>{

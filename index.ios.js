@@ -32,6 +32,18 @@ export default class OneTo50 extends Component{
     this._pushScene( PATH.GAME_RESULT, { finalTime });
   }
 
+  _onPressRestart = ():void =>{
+    if( this.navigator ){ this.navigator.popToTop(); }
+  }
+
+  _configureScene = ( route, routeStack )=>{
+    if( route.path === PATH.GAME_RESULT ){
+      return Navigator.SceneConfigs.FloatFromBottom;
+    }else{
+      return Navigator.SceneConfigs.PushFromRight;
+    }
+  }
+
   _renderScene = ( route: Route, navigator: Object ):React.Element =>{
     this.route = route;
     this.navigator = navigator;
@@ -40,9 +52,9 @@ export default class OneTo50 extends Component{
       case PATH.INTRO :
         return <Intro onPress={ this._onPressStart } />;
       case PATH.GAME_SCREEN :
-        return <GameScreen showResult={ this._showResult } />;
+        return <GameScreen showResult={ this._showResult } onRestart={ this._onPressRestart } />;
       case PATH.GAME_RESULT :
-        return <GameResult finalTime={ route.finalTime } />;
+        return <GameResult finalTime={ route.finalTime } onRestart={ this._onPressRestart } />;
       default :
         return <Text>Not Found</Text>;
     }
@@ -53,6 +65,7 @@ export default class OneTo50 extends Component{
       <Navigator
         initialRoute={{ path: PATH.INTRO }}
         renderScene={ this._renderScene }
+        configureScene={ this._configureScene }
       />
     );
   }
