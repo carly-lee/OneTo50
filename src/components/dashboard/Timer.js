@@ -19,7 +19,7 @@ export default class Timer extends PureComponent{
   }
 
   componentWillReceiveProps( nextProps ){
-    if( nextProps.nextNumber > 2 ){
+    if( nextProps.nextNumber > 50 ){
       clearInterval( this.timer );
       this.timer = null;
       this.props.reportFinalTime( String( this.state.currentTime ));
@@ -40,7 +40,6 @@ export default class Timer extends PureComponent{
       clearInterval( this.timer );
       this.timer = null;
     }
-    
   }
 
   render(){
