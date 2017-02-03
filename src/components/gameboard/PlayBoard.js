@@ -13,6 +13,7 @@ type Props = {
 export default class PlayBoard extends PureComponent{
   props:Props;
   allNumbers:Array<number> = [];
+  index:number;
 
   state: {
     buttons:Array<NumberButton>,
@@ -29,6 +30,17 @@ export default class PlayBoard extends PureComponent{
     this.state = { buttons };
   }
 
+  componentWillReceiveProps(nextProps){
+    const { nextNumber } = nextProps;
+    let newButtons:Array<NumberButton>;
+    if( nextNumber <= 26 ){
+      newButtons = this._getButtons( this.index, nextNumber );
+    }else{
+      newButtons = this._disappearButtons( this.index, nextNumber );
+    }
+    this.setState({ buttons: newButtons });
+  }
+
   _getShuffledNumbers = ():Array<number>=>{
     let array:Array<NumberButton> = [];
     for( let i=1; i<=25; i++ ){
@@ -39,13 +51,7 @@ export default class PlayBoard extends PureComponent{
 
   _onClickNumber = ( num:number, index:number ):void =>{
     const nextClick = num + 1;
-    let newButtons:Array<NumberButton>;
-    if( this.allNumbers.length > 0 ){
-      newButtons = this._getButtons( index, nextClick );
-    }else{
-      newButtons = this._disappearButtons( index, nextClick );
-    }
-    this.setState({ buttons: newButtons });
+    this.index = index;
     this.props.onNumberClick( nextClick );
   }
 

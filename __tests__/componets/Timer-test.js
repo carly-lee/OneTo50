@@ -43,6 +43,3 @@ describe( 'Timer', ()=>{
     expect(wrapper.find('Text').children().node).toEqual(0.01)
   });
 });
-
-// ReactTestMount.js ReactTestRendererStack.js
-// https://github.com/facebook/react/blob/2da35fcae888752948454dd04e9573cc7bdba8f5/src/renderers/testing/__tests__/ReactTestRenderer-test.js
