@@ -1,8 +1,18 @@
-import React, { PropTypes } from 'react';
+// @flow
+// $FlowIgnore
 import { Text, StyleSheet } from 'react-native';
+import React, { PropTypes } from 'react';
+
 import { ClickableButton, UnClickableButton } from 'components/gameboard';
 
-export const NumberButton = ( props )=>{
+type Props = {
+  number: number,
+  index: number,
+  nextNumber: number,
+  onClickNumber: ( number:number, index:number )=>{},
+}
+
+export const NumberButton = ( props:Props )=>{
   const _onPress = ()=>{
     props.onClickNumber( props.number, props.index );
   }
@@ -14,12 +24,6 @@ export const NumberButton = ( props )=>{
   }else{
     return <UnClickableButton style={styles.container} child={child} />;
   }
-}
-
-NumberButton.propTypes = {
-  number: PropTypes.number.isRequired,
-  index: PropTypes.number.isRequired,
-  onClickNumber: PropTypes.func.isRequired,
 }
 
 const styles = StyleSheet.create({

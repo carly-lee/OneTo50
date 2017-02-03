@@ -1,12 +1,13 @@
+// @flow
 import React, { PureComponent } from 'react';
+// $FlowIgnore
 import { View, StyleSheet, Button } from 'react-native';
 
 import { Dashboard } from 'components/dashboard';
 import { PlayBoard } from 'components/gameboard';
 
-//@flow
 type Props = {
-  showResult: ( time:number ) => void,
+  showResult: ( time:string ) => void,
   onRestart:()=>void,
 };
 
@@ -17,7 +18,7 @@ export default class GameScreen extends PureComponent{
     nextNumber:number,
   };
 
-  constructor( props ){
+  constructor( props:Props ){
     super( props );
     this.state = {
       nextNumber: 1,
@@ -28,7 +29,7 @@ export default class GameScreen extends PureComponent{
     this.setState({ nextNumber: next });
   }
 
-  _reportFinalTime = ( time:number )=>{
+  _reportFinalTime = ( time:string )=>{
     this.props.showResult( time );
   }
 

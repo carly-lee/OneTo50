@@ -34,6 +34,7 @@ exports[`NumberButton renders correctly when number and nextNumbers are the same
   accessibilityTraits={undefined}
   accessible={true}
   hitSlop={undefined}
+  isTVSelectable={true}
   onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -54,7 +55,8 @@ exports[`NumberButton renders correctly when number and nextNumbers are the same
       "width": 70,
     }
   }
-  testID={undefined}>
+  testID={undefined}
+  tvParallaxProperties={undefined}>
   <Text
     accessible={true}
     allowFontScaling={true}

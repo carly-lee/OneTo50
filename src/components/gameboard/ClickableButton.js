@@ -1,8 +1,15 @@
-import React, { PropTypes } from 'react';
+// @flow
+// $FlowIgnore
 import { TouchableOpacity, Text } from 'react-native';
+import React, { PropTypes } from 'react';
 
-//@flow
-export const ClickableButton = ( props )=>{
+type Props = {
+  child: React$Element<*>,
+  onPress: ()=>{},
+  style: Object,
+}
+
+export const ClickableButton = ( props:Props )=>{
   const _onPress = ()=>{
     props.onPress();
   };
@@ -13,9 +20,3 @@ export const ClickableButton = ( props )=>{
     </TouchableOpacity>
   )
 };
- 
-ClickableButton.propTypes = {
-  child: PropTypes.element.isRequired,
-  onPress: PropTypes.func.isRequired,
-}
-

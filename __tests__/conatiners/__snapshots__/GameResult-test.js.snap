@@ -32,6 +32,7 @@ exports[`GameResult renders correctly 1`] = `
     }
     accessible={true}
     hitSlop={undefined}
+    isTVSelectable={true}
     onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -44,7 +45,8 @@ exports[`GameResult renders correctly 1`] = `
         "opacity": 1,
       }
     }
-    testID={undefined}>
+    testID={undefined}
+    tvParallaxProperties={undefined}>
     <View
       style={
         Array [

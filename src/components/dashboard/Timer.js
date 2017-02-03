@@ -1,15 +1,16 @@
-import React, { PureComponent } from 'react';
+// @flow
+// $FlowIgnore
 import { Text, View, StyleSheet } from 'react-native';
+import React, { PureComponent } from 'react';
 
-//@flow
 type Props = {
-  reportFinalTime: ( time:number )=> void,
+  reportFinalTime: ( time:string )=> void,
   nextNumber: number,
 }
 
 export default class Timer extends PureComponent{
   props:Props;
-  timer: ?number = null;
+  timer: number = 0;
   state: {
     currentTime: number,
   };
@@ -18,10 +19,10 @@ export default class Timer extends PureComponent{
     currentTime: 0,
   }
 
-  componentWillReceiveProps( nextProps ){
+  componentWillReceiveProps( nextProps:Props ){
     if( nextProps.nextNumber > 50 ){
       clearInterval( this.timer );
-      this.timer = null;
+      this.timer = 0;
       this.props.reportFinalTime( String( this.state.currentTime ));
     }
   }
@@ -38,7 +39,7 @@ export default class Timer extends PureComponent{
   componentWillUnmount(){
     if( this.timer ){
       clearInterval( this.timer );
-      this.timer = null;
+      this.timer = 0;
     }
   }
 

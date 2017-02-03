@@ -1,12 +1,13 @@
-import React, { PureComponent } from 'react';
+// @flow
+// $FlowIgnore
 import { View, StyleSheet } from 'react-native';
+import React, { PureComponent } from 'react';
 
 import { Timer, NextNumber } from 'components/dashboard';
 
-//@flow
 type Props = {
   nextNumber: number,
-  reportFinalTime: ( time:number )=> void,
+  reportFinalTime: ( time:string )=> void,
 };
 
 export default class Dashboard extends PureComponent{

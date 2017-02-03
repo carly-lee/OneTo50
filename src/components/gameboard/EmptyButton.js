@@ -1,7 +1,8 @@
-import React from 'react';
+// @flow
+// $FlowIgnore
 import { StyleSheet, View } from 'react-native';
+import React from 'react';
 
-//@flow
 export const EmptyButton = ()=>(
   <View style={styles.container}></View>
 );

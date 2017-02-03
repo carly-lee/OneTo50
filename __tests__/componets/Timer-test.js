@@ -3,7 +3,6 @@ import React from 'react';
 import { Timer } from 'components/dashboard';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
-import { AppRegistry } from 'react-native-mock';
 
 describe( 'Timer', ()=>{
 

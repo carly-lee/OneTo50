@@ -1,4 +1,5 @@
-export const shuffleArray = function( array ) {
+// @flow
+export const shuffleArray = function( array:Array<number> ) {
   let sourceArray = [...array];
   let shuffledArray = [];
   let idx:number;

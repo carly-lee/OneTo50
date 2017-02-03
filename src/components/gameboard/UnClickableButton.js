@@ -1,15 +1,17 @@
-import React, { PropTypes } from 'react';
+// @flow
+// $FlowIgnore
 import { View, Text } from 'react-native';
+import React, { PropTypes } from 'react';
 
-//@flow
-export const UnClickableButton = ({...props})=>{
+type Props = {
+  child: React$Element<*>,
+  style: Object,
+};
+
+export const UnClickableButton = ({...props}:Props)=>{
   return (
     <View style={ props.style }>
       { props.child }
     </View>
   );
-}
-
-UnClickableButton.propTypes = {
-  child: PropTypes.element.isRequired,
 }

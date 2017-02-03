@@ -1,19 +1,17 @@
+//@flow
+// $FlowIgnore
+import { AppRegistry, Navigator, Text } from 'react-native';
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  Navigator,
-  Text,
-} from 'react-native';
+
 import { PATH } from 'constants';
 import Intro from 'components/intro';
 import GameScreen from 'containers/gamescreen';
 import GameResult from 'containers/gameresult';
 
-//@flow
-type Route = { path: string };
+type Route = { path: string, finalTime: string };
 
 export default class OneTo50 extends Component{
-  route: ?Route = null;
+  route: Route = { path: PATH.INTRO, finalTime: '0' };
   navigator: ?Object = null;
 
   _pushScene = ( path: string, obj: ?Object ):void =>{
@@ -28,7 +26,7 @@ export default class OneTo50 extends Component{
     this._pushScene( PATH.GAME_SCREEN );
   }
 
-  _showResult = ( finalTime: number ):void =>{
+  _showResult = ( finalTime: string ):void =>{
     this._pushScene( PATH.GAME_RESULT, { finalTime });
   }
 
@@ -44,7 +42,7 @@ export default class OneTo50 extends Component{
     }
   }
 
-  _renderScene = ( route: Route, navigator: Object ):React.Element =>{
+  _renderScene = ( route: Route, navigator: Object ):React$Element<any> =>{
     this.route = route;
     this.navigator = navigator;
 
@@ -63,7 +61,7 @@ export default class OneTo50 extends Component{
   render(){
     return (
       <Navigator
-        initialRoute={{ path: PATH.INTRO }}
+        initialRoute={ this.route }
         renderScene={ this._renderScene }
         configureScene={ this._configureScene }
       />

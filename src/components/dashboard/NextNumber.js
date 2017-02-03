@@ -1,7 +1,8 @@
-import React, { PureComponent } from 'react';
+// @flow
+// $FlowIgnore
 import { Text, View, StyleSheet } from 'react-native';
+import React, { PureComponent } from 'react';
 
-//@flow
 type Props = {
   number: number,
 };

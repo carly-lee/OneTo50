@@ -1,10 +1,11 @@
-import React, { PureComponent } from 'react';
+// @flow
+// $FlowIgnore
 import { View, StyleSheet } from 'react-native';
+import React, { PureComponent } from 'react';
 
 import { NumberButton, EmptyButton } from 'components/gameboard';
 import { shuffleArray } from 'utils';
 
-//@flow
 type Props = {
   nextNumber: number,
   onNumberClick: ( num: number ) => void,
@@ -19,7 +20,7 @@ export default class PlayBoard extends PureComponent{
     buttons:Array<NumberButton>,
   };
 
-  constructor( props ){
+  constructor( props:Props ){
     super( props );
     const initNumbers:Array<number> = this._getShuffledNumbers();
     let buttons:Array<NumberButton> = [];
@@ -30,7 +31,7 @@ export default class PlayBoard extends PureComponent{
     this.state = { buttons };
   }
 
-  componentWillReceiveProps(nextProps){
+  componentWillReceiveProps(nextProps:Props){
     const { nextNumber } = nextProps;
     let newButtons:Array<NumberButton>;
     if( nextNumber <= 26 ){
@@ -56,7 +57,7 @@ export default class PlayBoard extends PureComponent{
   }
 
   _getButtons = ( index:number, nextClick:number ):Array<NumberButton>=>{
-    const next:number = this.allNumbers.splice( 0,1 )[0];
+    const next:number = Number(this.allNumbers.splice( 0,1 )[0]);
     return this.state.buttons.map(( btn, idx )=>{
       if( idx === index ){
         return React.cloneElement( btn, { number: next, nextNumber: nextClick });
