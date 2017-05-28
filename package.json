@@ -1,46 +1,50 @@
 {
-	"name": "OneTo50",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"start": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
-		"flow": "node_modules/.bin/flow; test $? -eq 0 -o $? -eq 2",
-		"flow-stop": "node_modules/.bin/flow stop",
-		"test": "jest"
-	},
-	"dependencies": {
-		"react": "^15.4.0-rc.4",
-		"react-native": "0.41.0"
-	},
-	"devDependencies": {
-		"babel-jest": "^18.0.0",
-		"babel-plugin-module-resolver": "^2.4.0",
-		"babel-plugin-transform-flow-strip-types": "^6.22.0",
-		"babel-preset-react-native": "^1.9.1",
-		"enzyme": "^2.7.0",
-		"eslint-plugin-react-native": "^2.2.1",
-		"flow-bin": "^0.38.0",
-		"jest": "^18.1.0",
-		"react-native-mock": "^0.3.0",
-		"react-test-renderer": "^15.4.0-rc.4"
-	},
-	"jest": {
-		"preset": "react-native",
-		"verbose": true,
-		"timers": "fake",
-		"modulePaths": [
-			"<rootDir>/src/"
-		],
-		"haste": {
-			"defaultPlatform": "ios",
-			"platforms": [
-				"ios",
-				"android",
-				"native"
-			],
-			"providesModuleNodeModules": [
-				"react-native"
-			]
-		}
-	}
+  "name": "OneTo50",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
+    "flow": "node_modules/.bin/flow; test $? -eq 0 -o $? -eq 2",
+    "flow-stop": "node_modules/.bin/flow stop",
+    "test": "jest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "dependencies": {
+    "react": "^15.4.0-rc.4",
+    "react-native": "0.41.0",
+    "snyk": "^1.31.0"
+  },
+  "devDependencies": {
+    "babel-jest": "^18.0.0",
+    "babel-plugin-module-resolver": "^2.4.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-react-native": "^1.9.1",
+    "enzyme": "^2.7.0",
+    "eslint-plugin-react-native": "^2.2.1",
+    "flow-bin": "^0.38.0",
+    "jest": "^18.1.0",
+    "react-native-mock": "^0.3.0",
+    "react-test-renderer": "^15.4.0-rc.4"
+  },
+  "jest": {
+    "preset": "react-native",
+    "verbose": true,
+    "timers": "fake",
+    "modulePaths": [
+      "<rootDir>/src/"
+    ],
+    "haste": {
+      "defaultPlatform": "ios",
+      "platforms": [
+        "ios",
+        "android",
+        "native"
+      ],
+      "providesModuleNodeModules": [
+        "react-native"
+      ]
+    }
+  },
+  "snyk": true
 }
