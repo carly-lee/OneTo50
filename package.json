@@ -4,17 +4,19 @@
 	"private": true,
 	"scripts": {
 		"start": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
+		"reset": "rm -rf node_modules/ && yarn cache clean && watchman watch-del-all && rm -rf $TMPDIR/react-* && yarn install",
 		"flow": "node_modules/.bin/flow; test $? -eq 0 -o $? -eq 2",
 		"flow-stop": "node_modules/.bin/flow stop",
 		"test": "jest"
 	},
 	"dependencies": {
-		"react": "^15.4.0-rc.4",
-		"react-native": "0.41.0"
+		"react": "^16.0.0-alpha.12",
+		"react-native": "^0.47.0",
+		"react-navigation": "^1.0.0-beta.11"
 	},
 	"devDependencies": {
 		"babel-jest": "^18.0.0",
-		"babel-plugin-module-resolver": "^2.4.0",
+		"babel-plugin-module-resolver": "^2.7.1",
 		"babel-plugin-transform-flow-strip-types": "^6.22.0",
 		"babel-preset-react-native": "^1.9.1",
 		"enzyme": "^2.7.0",
