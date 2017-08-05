@@ -3,15 +3,22 @@
 import { Text, View, StyleSheet, Button } from 'react-native';
 import React, { PureComponent } from 'react';
 
+import { PATH } from 'constants';
+
 type Props = {
   finalTime:string,
   onRestart:()=>void,
 };
 export default class GameResult extends PureComponent{
-  props:Props;
+	props:Props;
+
+	static navigationOptions = {
+		header: null
+  }
 
   _onPressReStart = ()=>{
-    this.props.onRestart();
+		const { navigate } = this.props.navigation;
+		navigate(PATH.INTRO);
   }
 
   render(){

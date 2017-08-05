@@ -3,6 +3,7 @@ import React, { PureComponent } from 'react';
 // $FlowIgnore
 import { View, StyleSheet, Button } from 'react-native';
 
+import { PATH } from 'constants';
 import { Dashboard } from 'components/dashboard';
 import { PlayBoard } from 'components/gameboard';
 
@@ -12,7 +13,7 @@ type Props = {
 };
 
 export default class GameScreen extends PureComponent{
-  props:Props;
+	props:Props;
 
   state: {
     nextNumber:number,
@@ -30,11 +31,13 @@ export default class GameScreen extends PureComponent{
   }
 
   _reportFinalTime = ( time:string )=>{
-    this.props.showResult( time );
+		const { navigate } = this.props.navigation;
+		navigate(PATH.GAME_RESULT, { finalTime: time });
   }
 
   _onPressReStart = ()=>{
-    this.props.onRestart();
+		const { navigate } = this.props.navigation;
+		navigate(PATH.INTRO);
   }
 
   render(){

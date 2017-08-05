@@ -3,15 +3,22 @@
 import { Text, View, StyleSheet, Button } from 'react-native';
 import React, { PureComponent } from 'react';
 
+import { PATH } from 'constants';
+
 type Props = {
   onPress: () => void,
 };
 
 export default class Intro extends PureComponent{
-  props: Props;
+	props: Props;
+
+	static navigationOptions = {
+		header: null
+  }
 
   _onPressStart = ():void =>{
-    this.props.onPress();
+		const { navigate } = this.props.navigation;
+		navigate(PATH.GAME_SCREEN);
   }
 
   render(){
