@@ -15,6 +15,7 @@ To install this project you need npm.
 
 ```bash
 $ npm start or yarn start
+$ react-native run-ios
 ```
 
 ## Test
