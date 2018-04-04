@@ -8,8 +8,7 @@ import { Dashboard } from 'components/dashboard';
 import { PlayBoard } from 'components/gameboard';
 
 type Props = {
-  showResult: ( time:string ) => void,
-  onRestart:()=>void,
+	navigation: { navigate: () => void }
 };
 
 export default class GameScreen extends PureComponent{

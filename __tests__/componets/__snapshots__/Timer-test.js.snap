@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Timer renders correctly 1`] = `
 <View
   style={
@@ -8,11 +10,13 @@ exports[`Timer renders correctly 1`] = `
       "flexDirection": "column",
       "justifyContent": "center",
     }
-  }>
+  }
+>
   <Text
     accessible={true}
     allowFontScaling={true}
-    ellipsizeMode="tail">
+    ellipsizeMode="tail"
+  >
     0
   </Text>
 </View>

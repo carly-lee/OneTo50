@@ -5,16 +5,16 @@ import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 
 describe( 'Intro', ()=>{
-  const onPress = jest.fn();
+	const navigation = { navigate: jest.fn() };
 
   it( 'renders correctly',()=>{
-    const tree = renderer.create( <Intro onPress={ onPress } /> );
+    const tree = renderer.create( <Intro navigation={ navigation } /> );
     expect( tree ).toMatchSnapshot();
   });
 
   it( 'calls onPress() when a user presses the button', ()=>{
-    const wrapper = shallow( <Intro onPress={ onPress } /> );
+    const wrapper = shallow( <Intro navigation={ navigation } /> );
     wrapper.find( 'Button' ).simulate( 'press' );
-    expect( onPress ).toBeCalled();
+    expect( navigation.navigate ).toBeCalled();
   });
 });

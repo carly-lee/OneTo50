@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`GameResult renders correctly 1`] = `
 <View
   style={
@@ -8,7 +10,8 @@ exports[`GameResult renders correctly 1`] = `
       "justifyContent": "center",
       "padding": 15,
     }
-  }>
+  }
+>
   <Text
     accessible={true}
     allowFontScaling={true}
@@ -19,7 +22,8 @@ exports[`GameResult renders correctly 1`] = `
         "fontWeight": "bold",
         "textAlign": "center",
       }
-    }>
+    }
+  >
     34.50
   </Text>
   <View
@@ -31,8 +35,11 @@ exports[`GameResult renders correctly 1`] = `
       ]
     }
     accessible={true}
+    collapsable={undefined}
+    hasTVPreferredFocus={undefined}
     hitSlop={undefined}
     isTVSelectable={true}
+    nativeID={undefined}
     onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -46,21 +53,24 @@ exports[`GameResult renders correctly 1`] = `
       }
     }
     testID={undefined}
-    tvParallaxProperties={undefined}>
+    tvParallaxProperties={undefined}
+  >
     <View
       style={
         Array [
           Object {},
         ]
-      }>
+      }
+    >
       <Text
         accessible={true}
         allowFontScaling={true}
+        disabled={undefined}
         ellipsizeMode="tail"
         style={
           Array [
             Object {
-              "color": "#0C42FD",
+              "color": "#007AFF",
               "fontSize": 18,
               "padding": 8,
               "textAlign": "center",
@@ -69,7 +79,8 @@ exports[`GameResult renders correctly 1`] = `
               "color": "#841584",
             },
           ]
-        }>
+        }
+      >
         Restart
       </Text>
     </View>

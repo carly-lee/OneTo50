@@ -1,22 +1,18 @@
-//@flow
-// $FlowIgnore
+import React, { PureComponent } from 'react';
 import { AppRegistry, Text } from 'react-native';
-import React, { Component } from 'react';
-import { StackNavigator} from 'react-navigation';
+import { StackNavigator } from 'react-navigation';
 
 import { PATH } from 'constants';
 import Intro from 'components/intro';
 import GameScreen from 'containers/gamescreen';
 import GameResult from 'containers/gameresult';
 
-type Route = { path: string, finalTime: string };
-
 const mapNavigationStateParamsToProps = (PassedComponent) => {
-    return class extends Component {
+    return class extends PureComponent {
         static navigationOptions = PassedComponent.navigationOptions;
         render() {
-            const {navigation: {state: {params}}} = this.props
-            return <PassedComponent {...params} {...this.props} />
+            const { navigation: { state: { params }}} = this.props
+            return <PassedComponent { ...params } { ...this.props } />
         }
     }
 }

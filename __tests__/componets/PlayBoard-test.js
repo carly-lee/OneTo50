@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 
 describe( 'PlayBoard', ()=>{
-  
+
   const props = {
     nextNumber: 1,
     onNumberClick: jest.fn()

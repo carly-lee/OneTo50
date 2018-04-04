@@ -1,11 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`ClickableButton renders correctly 1`] = `
 <View
   accessibilityComponentType={undefined}
   accessibilityLabel={undefined}
   accessibilityTraits={undefined}
   accessible={true}
+  collapsable={undefined}
+  hasTVPreferredFocus={undefined}
   hitSlop={undefined}
   isTVSelectable={true}
+  nativeID={undefined}
   onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -19,11 +24,13 @@ exports[`ClickableButton renders correctly 1`] = `
     }
   }
   testID={undefined}
-  tvParallaxProperties={undefined}>
+  tvParallaxProperties={undefined}
+>
   <Text
     accessible={true}
     allowFontScaling={true}
-    ellipsizeMode="tail">
+    ellipsizeMode="tail"
+  >
     test
   </Text>
 </View>

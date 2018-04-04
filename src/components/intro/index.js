@@ -6,7 +6,7 @@ import React, { PureComponent } from 'react';
 import { PATH } from 'constants';
 
 type Props = {
-  onPress: () => void,
+	navigation: { navigate: () => void }
 };
 
 export default class Intro extends PureComponent{

@@ -13,7 +13,7 @@ describe( 'ClickableButton', ()=>{
     const tree = renderer.create( <ClickableButton child={child} onPress={onPress} /> );
     expect( tree ).toMatchSnapshot();
   });
-  
+
   it( 'calls onPress() when a user presses the button', ()=>{
     const wrapper = shallow( <ClickableButton child={child} onPress={onPress} /> );
     wrapper.find( 'TouchableOpacity' ).simulate( 'press' );

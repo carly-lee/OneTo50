@@ -7,7 +7,6 @@ import { PATH } from 'constants';
 
 type Props = {
   finalTime:string,
-  onRestart:()=>void,
 };
 export default class GameResult extends PureComponent{
 	props:Props;

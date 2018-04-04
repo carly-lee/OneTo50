@@ -6,10 +6,11 @@ import { shallow } from 'enzyme';
 
 describe( 'GameScreen', ()=>{
 
-  const props = {
-    onRestart: jest.fn(),
-    showResult: jest.fn()
-  }
+  const props = {};
+
+	beforeEach(() => {
+		props.navigation = { navigate: jest.fn() }
+	});
 
   it( 'renders correctly',()=>{
     const wrapper = shallow(<GameScreen {...props} />);
@@ -18,18 +19,18 @@ describe( 'GameScreen', ()=>{
     expect(wrapper.find('Button').length).toEqual(1);
   });
 
-  it('calls onRestart() when a user presses the button', ()=>{
+  it('calls navigate() when a user presses the button', ()=>{
     const wrapper = shallow(<GameScreen {...props} />);
-    expect(props.onRestart).not.toBeCalled();
+    expect(props.navigation.navigate).not.toBeCalled();
     wrapper.find('Button').simulate('press');
-    expect(props.onRestart).toBeCalled();
+    expect(props.navigation.navigate).toBeCalled();
   });
 
-  it('calls showResult() when _reportFinalTime is called', ()=>{
+  it('calls navigate() when _reportFinalTime is called', ()=>{
     const instance = renderer.create(<GameScreen {...props} />).getInstance();
-    expect(props.showResult).not.toBeCalled();
+    expect(props.navigation.navigate).not.toBeCalled();
     instance._reportFinalTime(12.33);
-    expect(props.showResult).toBeCalledWith(12.33);
+    expect(props.navigation.navigate).toBeCalledWith("GAME_RESULT", {"finalTime": 12.33});
   });
 
   it('updates the state when _onNumberClick is called', ()=>{

@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Intro renders correctly 1`] = `
 <View
   style={
@@ -7,7 +9,8 @@ exports[`Intro renders correctly 1`] = `
       "flex": 1,
       "justifyContent": "center",
     }
-  }>
+  }
+>
   <Text
     accessible={true}
     allowFontScaling={true}
@@ -18,20 +21,24 @@ exports[`Intro renders correctly 1`] = `
         "fontWeight": "bold",
         "textAlign": "center",
       }
-    }>
+    }
+  >
     1 to 50
   </Text>
   <View
     accessibilityComponentType="button"
-    accessibilityLabel="Let\'s Start!"
+    accessibilityLabel="Let's Start!"
     accessibilityTraits={
       Array [
         "button",
       ]
     }
     accessible={true}
+    collapsable={undefined}
+    hasTVPreferredFocus={undefined}
     hitSlop={undefined}
     isTVSelectable={true}
+    nativeID={undefined}
     onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -45,21 +52,24 @@ exports[`Intro renders correctly 1`] = `
       }
     }
     testID={undefined}
-    tvParallaxProperties={undefined}>
+    tvParallaxProperties={undefined}
+  >
     <View
       style={
         Array [
           Object {},
         ]
-      }>
+      }
+    >
       <Text
         accessible={true}
         allowFontScaling={true}
+        disabled={undefined}
         ellipsizeMode="tail"
         style={
           Array [
             Object {
-              "color": "#0C42FD",
+              "color": "#007AFF",
               "fontSize": 18,
               "padding": 8,
               "textAlign": "center",
@@ -68,8 +78,9 @@ exports[`Intro renders correctly 1`] = `
               "color": "#841584",
             },
           ]
-        }>
-        Let\'s Start!
+        }
+      >
+        Let's Start!
       </Text>
     </View>
   </View>

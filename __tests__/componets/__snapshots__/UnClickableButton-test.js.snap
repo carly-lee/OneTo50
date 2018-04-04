@@ -1,10 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`UnClickableButton renders correctly 1`] = `
 <View
-  style={undefined}>
+  style={undefined}
+>
   <Text
     accessible={true}
     allowFontScaling={true}
-    ellipsizeMode="tail">
+    ellipsizeMode="tail"
+  >
     test
   </Text>
 </View>
