@@ -2,7 +2,7 @@
 ![](https://img.shields.io/badge/status-in%20development-yellow.svg) [![Build Status](https://travis-ci.org/carly-lee/OneTo50.svg?branch=master)](https://travis-ci.org/carly-lee/OneTo50) [![Dependency Status](https://gemnasium.com/badges/github.com/carly-lee/OneTo50.svg)](https://gemnasium.com/github.com/carly-lee/OneTo50) 
 [![Coverage Status](https://coveralls.io/repos/github/carly-lee/OneTo50/badge.svg?branch=master)](https://coveralls.io/github/carly-lee/OneTo50?branch=master)
 
-Simple clicking game wrriten in React Native
+This is a simple clicking game wrriten in React Native.
 
 ## Installation
 
@@ -24,3 +24,7 @@ For running unit tests :
 ```bash
 $ npm test or yarn test
 ```
+## To Do
+
+- Make it pretty.
+- Fixed warings.
