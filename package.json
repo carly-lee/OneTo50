@@ -1,65 +1,69 @@
 {
-	"name": "OneTo50",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"start": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
-		"reset": "rm -rf node_modules/ && yarn cache clean && watchman watch-del-all && rm -rf $TMPDIR/react-* && yarn install",
-		"flow": "node_modules/.bin/flow; test $? -eq 0 -o $? -eq 2",
-		"flow-stop": "node_modules/.bin/flow stop",
-		"test": "NODE_ENV=test jest"
-	},
-	"dependencies": {
-		"react": "^16.3.0-alpha.0",
-		"react-native": "0.55.0",
-		"react-navigation": "^1.0.0-beta.11"
-	},
-	"devDependencies": {
-		"@babel/plugin-transform-modules-commonjs": "^7.0.0-beta.44",
-		"babel-jest": "^22.4.3",
-		"babel-plugin-module-resolver": "^3.1.1",
-		"babel-plugin-transform-flow-strip-types": "^6.22.0",
-		"babel-preset-env": "^1.6.1",
-		"babel-preset-es2015": "^6.24.1",
-		"babel-preset-react-native": "^4.0.0",
-		"enzyme": "^3.3.0",
-		"enzyme-adapter-react-16": "^1.1.1",
-		"eslint-plugin-react-native": "^3.2.1",
-		"flow-bin": "^0.69.0",
-		"jest": "^22.4.3",
-		"react-dom": "^16.3.1",
-		"react-native-mock": "^0.3.1",
-		"react-test-renderer": "^16.3.1"
-	},
-	"jest": {
-		"preset": "react-native",
-		"verbose": true,
-		"timers": "fake",
-		"transform": {
-			"^.+\\.js$": "babel-jest"
-		},
-		"moduleFileExtensions": [
-			"js"
-		],
-		"setupFiles": [
-			"./jest/setup.js"
-		],
-		"transformIgnorePatterns": [
-			"node_modules/(?!(react-native)/)"
-		],
-		"modulePaths": [
-			"<rootDir>/src/"
-		],
-		"haste": {
-			"defaultPlatform": "ios",
-			"platforms": [
-				"ios",
-				"android",
-				"native"
-			],
-			"providesModuleNodeModules": [
-				"react-native"
-			]
-		}
-	}
+  "name": "OneTo50",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
+    "reset": "rm -rf node_modules/ && yarn cache clean && watchman watch-del-all && rm -rf $TMPDIR/react-* && yarn install",
+    "flow": "node_modules/.bin/flow; test $? -eq 0 -o $? -eq 2",
+    "flow-stop": "node_modules/.bin/flow stop",
+    "test": "NODE_ENV=test jest",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "dependencies": {
+    "react": "^16.3.0-alpha.0",
+    "react-native": "0.55.0",
+    "react-navigation": "^1.0.0-beta.11",
+    "@snyk/protect": "latest"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.0.0-beta.44",
+    "babel-jest": "^22.4.3",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react-native": "^4.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint-plugin-react-native": "^3.2.1",
+    "flow-bin": "^0.69.0",
+    "jest": "^22.4.3",
+    "react-dom": "^16.3.1",
+    "react-native-mock": "^0.3.1",
+    "react-test-renderer": "^16.3.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "verbose": true,
+    "timers": "fake",
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "setupFiles": [
+      "./jest/setup.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-native)/)"
+    ],
+    "modulePaths": [
+      "<rootDir>/src/"
+    ],
+    "haste": {
+      "defaultPlatform": "ios",
+      "platforms": [
+        "ios",
+        "android",
+        "native"
+      ],
+      "providesModuleNodeModules": [
+        "react-native"
+      ]
+    }
+  },
+  "snyk": true
 }
